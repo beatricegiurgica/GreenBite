@@ -1,0 +1,22 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Environment files
+.env
+
+# Byte-compiled Python files
+*.pyc
+__pycache__/
+
+# Django database file (if using SQLite)
+db.sqlite3
+
+# Local virtual environment
+venv/
+myenv/
+
+# IDE settings (e.g., Visual Studio Code)
+.vscode/
+.idea/
+
+# Log files
+*.log

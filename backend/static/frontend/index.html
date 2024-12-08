@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">GreenBite</a>
+    <ul class="navbar-links">
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="profile.html" class="profile-link"><i class="bi bi-person-circle"></i></a></li>
+    </ul>
+  </nav>
+
+ <!-- Hero Section -->
+ <header class="hero-container">
+  <img src="images/header.jpg" alt="Cooking Background" class="hero-background">
+  <div class="hero-content">
+    <h1 class="hero-title">Smart cooking<br>starts here!</h1>
+    <p class="hero-subtitle">USE WHAT YOU HAVE, WASTE LESS, AND SAVOUR MORE.</p>
+    <button class="cta-btn" onclick="scrollToContent()">Get Started</button>
+  </div>
+</header>
+
+<!-- About GreenBite Section -->
+<section id="about-section" class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About GreenBite</h2>
+      <p>
+        At GreenBite, we're on a mission to make cooking easier, more inspiring, and more sustainable. How often have you looked into your fridge, spotted a few ingredients, and wondered, "What can I possibly make with this?" We've all been there—and GreenBite is here to help.
+        <br>
+        Simply input the ingredients you have into our search bar, and in seconds, you'll discover a variety of recipes tailored to your pantry. Whether you're preparing a quick weekday meal, exploring new dishes, or planning a dinner for family and friends, GreenBite provides a seamless solution to unlock the potential of your ingredients.
+        <br>
+        But GreenBite isn't just about convenience—it's about sustainability too. Every year, millions of tons of food are wasted globally. At GreenBite, we're dedicated to changing that. By encouraging the creative use of every ingredient, we empower our users to reduce food waste while saving time and money. Together, we can transform overlooked ingredients into extraordinary meals, making a positive impact on the planet.
+        <br>
+        GreenBite is designed to bring efficiency and inspiration to your kitchen. With our user-friendly interface and commitment to sustainability, we aim to not only simplify meal planning but also foster a healthier relationship with food.
+        <br>
+        Discover the smarter way to cook with GreenBite—because every ingredient matters.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/logo.png" alt="GreenBite Logo"/>
+    </div>
+  </div>
+</section>
+
+<!-- Search Recipes Section -->
+<section id="search-recipes-index" class="search-recipes-index">
+  <div class="search-background">
+    <img src="images/search_background.jpg" alt="Background with ingredients">
+  </div>
+  <div class="search-container">
+    <h2 class="search-title">What's in your pantry?</h2>
+    <div class="search-bar-index">
+      <input type="text" id="ingredient-input" placeholder="Type your ingredients here...">
+      <button id="add-ingredient">Add</button>
+    </div>
+    <div class="ingredient-list" id="ingredient-list">
+      <!-- Added ingredients will appear here -->
+    </div>
+    <div class="filters">
+      <div class="filter" onclick="toggleDropdown('meal-type-dropdown')">Meal Type ▼</div>
+      <div id="meal-type-dropdown" class="dropdown">
+        <div onclick="selectFilter('Meal Type', 'Breakfast')">Breakfast</div>
+        <div onclick="selectFilter('Meal Type', 'Lunch')">Lunch</div>
+        <div onclick="selectFilter('Meal Type', 'Dinner')">Dinner</div>
+        <div onclick="selectFilter('Meal Type', 'Snack')">Snack</div>
+      </div>
+      <div class="filter" onclick="toggleDropdown('difficulty-dropdown')">Difficulty ▼</div>
+      <div id="difficulty-dropdown" class="dropdown">
+        <div onclick="selectFilter('Difficulty', 'Easy')">Easy</div>
+        <div onclick="selectFilter('Difficulty', 'Medium')">Medium</div>
+        <div onclick="selectFilter('Difficulty', 'Hard')">Hard</div>
+      </div>
+      <div class="filter" onclick="toggleDropdown('cooking-time-dropdown')">Cooking Time ▼</div>
+      <div id="cooking-time-dropdown" class="dropdown">
+        <div onclick="selectFilter('Cooking Time', 'Under 30 mins')">Under 30 mins</div>
+        <div onclick="selectFilter('Cooking Time', '30-60 mins')">30-60 mins</div>
+        <div onclick="selectFilter('Cooking Time', 'Over 60 mins')">Over 60 mins</div>
+      </div>
+      <div class="filter" onclick="toggleDropdown('dietary-preferences-dropdown')">Dietary Preferences ▼</div>
+      <div id="dietary-preferences-dropdown" class="dropdown">
+        <div onclick="selectFilter('Dietary Preferences', 'Vegetarian')">Vegetarian</div>
+        <div onclick="selectFilter('Dietary Preferences', 'Vegan')">Vegan</div>
+        <div onclick="selectFilter('Dietary Preferences', 'Gluten Free')">Gluten Free</div>
+        <div onclick="selectFilter('Dietary Preferences', 'Lactose Free')">Lactose Free</div>
+      </div>
+    </div>
+    <div class="filter-tags" id="filter-tags">
+      <!-- Selected filters will appear here -->
+    </div>
+    </div>    
+    <div class="recipes" id="recipe-results">
+      <!-- Recipe cards will appear here -->
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <p>&copy; 2024 | GreenBite | Cook with purpose, savour with love.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

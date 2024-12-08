@@ -3,4 +3,5 @@ GreenBite is a sustainability-focused recipe website designed to help users redu
 
 # Built With
 Frontend: HTML, CSS, JavaScript <br> 
-Backend: Django (Python)
+Backend: Django (Python) <br>
+API: Spoonacular API
